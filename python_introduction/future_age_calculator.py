@@ -1,7 +1,9 @@
+# Future age calculator. The code calculates what the age will be on the future (2025)
+
 age = int(input("How old are you? "))
-currentYear = 2023
-futureYear = 2050
+current_year = 2023
+future_year = 2050
 
-ageInFutureYear = age + (futureYear - currentYear)
+age_in_future_year = age + (future_year - current_year)
 
-print("In", futureYear, "you will be", ageInFutureYear, "years old")
+print("In", future_year, "you will be", age_in_future_year, "years old")
