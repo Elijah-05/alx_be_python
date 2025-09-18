@@ -23,9 +23,9 @@ match priority:
         message = f"'{task}' is a low priority task"
 
 if time_bound == 'yes':
-    message += " that requires immediate attention today!"
+    message = "Reminder: " + message + " that requires immediate attention today!"
 else:
-    message += ". Consider completing it when you have free time."
+    message = "Note: " + message + ". Consider completing it when you have free time."
 
 
 print(message)
