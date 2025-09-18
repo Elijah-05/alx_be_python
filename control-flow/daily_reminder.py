@@ -17,15 +17,17 @@ while True:
 match priority:
     case "high":
         message = f"'{task}' is a high priority task"
+        if time_bound == 'yes':
+            print(f"Reminder:  '{task}' is a high priority task that requires immediate attention today!")
+        else:
+            print(f"Note:  '{task}' is a high priority task. But, consider completing it when you have free time.")
     case "medium":
-        message = f"'{task}' is a medium priority task"
+        if time_bound == 'yes':
+            print(f"Reminder:  '{task}' is a medium priority task that requires immediate attention today!")
+        else:
+            print(f"Note:  '{task}' is a medium priority task. Consider completing it when you have free time.")
     case "low":
-        message = f"'{task}' is a low priority task"
-
-if time_bound == 'yes':
-    message = "Reminder: " + message + " that requires immediate attention today!"
-else:
-    message = "Note: " + message + ". Consider completing it when you have free time."
-
-
-print(message)
+        if time_bound == 'yes':
+            print(f"Reminder:  '{task}' is a low priority task that requires immediate attention today!")
+        else:
+            print(f"Note:  '{task}' is a low priority task. Consider completing it when you have free time.")
