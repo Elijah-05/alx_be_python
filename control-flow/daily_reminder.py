@@ -22,10 +22,10 @@ match priority:
     case "low":
         message = f"'{task}' is a low priority task"
 
-match time_bound:
-    case "yes":
-        message += " that requires immediate attention today!"
-    case "no":
-        message +=  ". Consider completing it when you have free time."
+if time_bound == 'yes':
+    message += " that requires immediate attention today!"
+else:
+    message += ". Consider completing it when you have free time."
+
 
 print(message)
